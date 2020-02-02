@@ -1,0 +1,27 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.14.0)
+    power_assert (1.1.5)
+    rack (2.1.2)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
+    rake (13.0.1)
+    test-unit (3.3.5)
+      power_assert
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest
+  rack
+  rack-test
+  rake
+  test-unit
+
+RUBY VERSION
+   ruby 2.7.0p0
+
+BUNDLED WITH
+   2.1.2
