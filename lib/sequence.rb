@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Sequence
   attr_accessor :value
 
@@ -6,28 +8,27 @@ class Sequence
   end
 
   def next
-    @value = get_str(@value)
+    @value = calculate_next_value(@value)
     self
   end
 
   private
 
-  def get_str(str)
-    res = ''
-    char = str[0]
+  def calculate_next_value(value)
+    result = ''
+    prev_char = value[0]
     char_count = 1
-    i = 1
-    while i < str.length
-      if char == str[i]
+
+    1.upto(value.length) do |i|
+      if prev_char == value[i]
         char_count += 1
       else
-        res += "#{char_count}#{char}"
-        char = str[i]
+        result += "#{char_count}#{prev_char}"
+        prev_char = value[i]
         char_count = 1
       end
-
-      i += 1
     end
-    res += "#{char_count}#{char}"
+
+    result
   end
 end
