@@ -3,7 +3,7 @@ GEM
   specs:
     minitest (5.14.0)
     power_assert (1.1.5)
-    rack (2.1.2)
+    rack (2.1.4)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rake (13.0.1)
